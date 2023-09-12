@@ -8,7 +8,7 @@ http.createServer(function (request, response) {
    response.writeHead(200, {'Content-Type': 'text/plain'})
 
    // Send the response body as "Hello World"
-   response.end('You are always free to change your mind\n and choose a different future, or a different past\n')
+   response.end('This is an update. You are always free to change your mind\n and choose a different future, or a different past\n')
 }).listen(3333)
 
 // Console will print the message
