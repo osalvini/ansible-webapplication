@@ -1,0 +1,24 @@
+---
+# tasks file for helloworld
+- name: Copying the application file
+  copy: 
+    src: webapplication.js
+    dest: /home/ec2-user/
+    owner: ec2-user
+    group: ec2-user
+    mode: 0644
+  notify: restart webapplication
+
+- name: Copying the upstart file
+  copy: 
+    src: webapplication.conf
+    dest: /etc/init/webapplication.conf
+    owner: root
+    group: root
+    mode: 0644
+    
+- name: Starting the webapplication node service
+  service:
+    name: webapplication
+    state: started
+

@@ -1,0 +1,13 @@
+---
+# tasks file for mysql
+ - name: Installing mysql
+   yum: 
+    name: ['mysql']
+    state: installed
+   with_items:
+    - mysql - name: Installing mysql
+   yum: 
+    name: ['mysql']
+    state: installed
+   with_items:
+    - mysql
